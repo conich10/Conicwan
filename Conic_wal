@@ -16,11 +16,7 @@ contract TokenCorrect is Token {
     }
     function transfer(address _to, uint _amt) public override {
         require(balance[msg.sender] >= _amt);
-        balance[msg.sender] -= _amt;
-        balance[_to] += _amt;
-    }
-}
-
+        balance[msg.sender] -= _amt
 contract Test {
     function property_transfer(address _token, address _to, uint _amt) public {
         require(_to != address(this));
